@@ -94,34 +94,34 @@ console.log('Exercise 9 Result: ', allFoods);
 Exercise 10:  QUESTION
   - Assign a boolean to a variable named hasSoup depending upon whether or not the foods array includes the string 'soup'.
 */
+//Step 1: Google: check if javascript array includes a value
 
 // Complete Exercise 10 below...
 
-// if (foods === "soup") {
-//   var hasSoup = "false";
-// }
 
-let hasSoup = true;
-
+let hasSoup = false;
  // [ 'taco', 'sushi', 'cupcake', 'tofu', 'cheeseburger' ]
+// foods.push("soup")
 
-for (i = 0; i < foods.length; i++){
+for (i = 0; i < foods.length; i++){ 
 //  console.log(foods[i])
- if(foods[i] !== "soup"){
-  console.log(`${foods} is Not soup!`)
- }
- else { console.log("this is soup")
+ if(foods[i] === "soup"){
+  hasSoup = true;
  }
 }
+console.log(hasSoup);
+// //Option 1: 
+// let hasSoup; // just declare it. Dont add anything else. 
 
-
-// foods.forEach(food => {
-//   if(food === "soup"){
-//     console.log('Exercise 10 Result: ', hasSoup)
-//   }
-// })
+// if (foods.includes('soup')){
+//   hasSoup = true;
+// } else {
+//   hasSoup = false;
+// }
 
 // console.log('Exercise 10 Result: ', hasSoup);
+
+//Option 2: do a forEach method
 
 /*Exercise 11:
   - Use either the for, for of, or forEach loops to iterate through the provided nums array and add each odd number to a new array named odds.
@@ -185,7 +185,6 @@ Exercise 14:
 // Complete Exercise 14 below...
 
 
-
 // console.log('Exercise 14 Result: ', num);
 
 /*
@@ -195,7 +194,19 @@ Exercise 15:
 */
 
 // Complete Exercise 15 below...
+const numArrays = [
+	[100, 5, 23], 
+	[15, 21, 72, 9],
+	[45, 66],
+	[7, 81, 90]
+];
+let total = 0;
+for (let i = 0; i < numArrays.length; i ++){
 
+  for (let j = 0; j < numArrays[i].length; j++){  //nested loops numArrays[i] is the entire first array
+    console.log(`i is ${i} and j is ${j} and so numarrays[i][j] is ${numArrays[i][j]}`)
+    total += numArrays [i][j] // total = total + numArrays
+  }
+}
 
-
-// console.log('Exercise 15 Result: ', total);
+console.log('Exercise 15 Result: ', total);
