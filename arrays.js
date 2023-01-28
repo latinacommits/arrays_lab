@@ -16,7 +16,7 @@ Exercise 2:
 
 // Complete Exercise 2 below...
 
-
+foods.push('pizza', 'cheeseburger');
 
 console.log('Exercise 2 Result: ',  foods);
 
@@ -27,8 +27,7 @@ Exercise 3:
 
 // Complete Exercise 3 below...
 
-
-
+foods.splice(0, 0, "taco");
 console.log('Exercise 3 Result: ', foods);
 
 /*
@@ -38,8 +37,7 @@ Exercise 4:
 
 // Complete Exercise 4 below...
 
-
-
+let favFood = foods[1];
 console.log('Exercise 4 Result: ', favFood);
 
 /*
@@ -48,9 +46,7 @@ Exercise 5:
 */
 
 // Complete Exercise 5 below...
-
-
-
+foods.splice(2,0,"tofu")
 console.log('Exercise 5 Result: ', foods);
 
 /*
@@ -59,9 +55,7 @@ Exercise 6:
 */
 
 // Complete Exercise 6 below...
-
-
-
+foods.splice(1,1, "sushi", "cupcake")
 console.log('Exercise 6 Result: ', foods);
 
 /*
@@ -72,8 +66,7 @@ Exercise 7:
 
 // Complete Exercise 7 below...
 
-
-
+let yummy = foods.slice(1,3);
 console.log('Exercise 7 Result: ', yummy);
 
 /*
@@ -83,9 +76,8 @@ Exercise 8:
 
 // Complete Exercise 8 below...
 
-
-
-console.log('Exercise 8 Result: ', soyIdx);
+let soyIdx = foods.indexOf('tofu');
+console.log('Exercise 8 Result: ', soyIdx); //index of the string
 
 /*
 Exercise 9:
@@ -95,23 +87,43 @@ Exercise 9:
 
 // Complete Exercise 9 below...
 
-
-
+let allFoods = foods.join(" -> ");
 console.log('Exercise 9 Result: ', allFoods);
 
 /*
-Exercise 10:
+Exercise 10:  QUESTION
   - Assign a boolean to a variable named hasSoup depending upon whether or not the foods array includes the string 'soup'.
 */
 
 // Complete Exercise 10 below...
 
+// if (foods === "soup") {
+//   var hasSoup = "false";
+// }
+
+let hasSoup = true;
+
+ // [ 'taco', 'sushi', 'cupcake', 'tofu', 'cheeseburger' ]
+
+for (i = 0; i < foods.length; i++){
+//  console.log(foods[i])
+ if(foods[i] !== "soup"){
+  console.log(`${foods} is Not soup!`)
+ }
+ else { console.log("this is soup")
+ }
+}
 
 
-console.log('Exercise 10 Result: ', hasSoup);
+// foods.forEach(food => {
+//   if(food === "soup"){
+//     console.log('Exercise 10 Result: ', hasSoup)
+//   }
+// })
 
-/*
-Exercise 11:
+// console.log('Exercise 10 Result: ', hasSoup);
+
+/*Exercise 11:
   - Use either the for, for of, or forEach loops to iterate through the provided nums array and add each odd number to a new array named odds.
   - Some helpful video about looping over arrays
     > https://www.youtube.com/watch?v=JFf6ogtBUdo&t=144s
@@ -123,9 +135,11 @@ const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
 
 // Complete Exercise 11 below...
 
+let odds = [];
 
 
-console.log('Exercise 11 Result: ', odds);
+
+// console.log('Exercise 11 Result: ', odds);
 
 /*
 Exercise 12:
@@ -139,10 +153,10 @@ Exercise 12:
 
 
 
-console.log('Exercise 12 Results:');
-console.log('  fizz:', fizz);
-console.log('  buzz:', buzz);
-console.log('  fizzbuzz:', fizzbuzz);
+// console.log('Exercise 12 Results:');
+// console.log('  fizz:', fizz);
+// console.log('  buzz:', buzz);
+// console.log('  fizzbuzz:', fizzbuzz);
 
 /*
 Exercise 13:
@@ -150,18 +164,18 @@ Exercise 13:
   - Assume you don't know how many nested arrays numArrays contains.
 */
 
-const numArrays = [
-	[100, 5, 23],
-	[15, 21, 72, 9],
-	[45, 66],
-	[7, 81, 90]
-];
+// const numArrays = [
+// 	[100, 5, 23],
+// 	[15, 21, 72, 9],
+// 	[45, 66],
+// 	[7, 81, 90]
+// ];
 
-// Complete Exercise 13 below...
+// // Complete Exercise 13 below...
 
 
 
-console.log('Exercise 13 Result: ', numList);
+// console.log('Exercise 13 Result: ', numList);
 
 /*
 Exercise 14:
@@ -172,7 +186,7 @@ Exercise 14:
 
 
 
-console.log('Exercise 14 Result: ', num);
+// console.log('Exercise 14 Result: ', num);
 
 /*
 Exercise 15:
@@ -184,4 +198,4 @@ Exercise 15:
 
 
 
-console.log('Exercise 15 Result: ', total);
+// console.log('Exercise 15 Result: ', total);
